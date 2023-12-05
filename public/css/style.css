@@ -1,0 +1,279 @@
+/*
+ * General Styling
+ */
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h3 {
+  font-size: 20pt;
+  text-align: center;
+}
+
+/*
+ * Header
+ */
+
+header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #326edc;
+  width: 100%;
+  padding: 10px 0px;
+}
+
+#logo {
+  width: 100px;
+  height: 100px;
+  background-image: url("../assets/logo.png");
+  border: solid;
+  border-color: #235fd7;
+  border-width: 2px;
+  margin-left: 10px;
+}
+
+header nav ul {
+  display: flex;
+  flex-flow: row wrap;
+  margin-right: 10px;
+}
+
+header nav ul li {
+  padding: 0px 25px;
+}
+
+header nav ul li a {
+  font-size: 18pt;
+  color: white;
+}
+
+header nav ul li a:hover {
+  color: #b9cbf0;
+}
+
+/*
+ * Content
+ */
+
+#heading {
+  background-color: #e1e1e1;
+  text-align: center;
+  padding: 10px 0px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 12pt;
+  font-weight: normal;
+}
+
+#content {
+  display: flex;
+  flex-flow: column wrap;
+  width: 60%;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 25px;
+}
+
+#content h2 {
+  font-size: 24pt;
+  text-align: center;
+}
+
+#threePosts {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin: 10px 0px 25px 0px;
+}
+
+#threePosts .flowtow {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  background-color: #e1e1e1;
+  border: solid;
+  border-color: #afafaf;
+  border-width: 2px;
+  align-items: center;
+}
+
+#threePosts img {
+  border-bottom: 2px solid #afafaf;
+}
+
+#threePosts ul {
+  padding: 15px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#threePosts li {
+  width: 100%;
+  padding: 2px 0px;
+  text-align: center;
+}
+
+.likes {
+  font-size: 10pt;
+}
+
+#recentPosts,
+#popularPosts {
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+#most-recent {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  width: 100%;
+  margin: 10px 0px;
+}
+
+.flowtow2 {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  margin: 15px 0px;
+  background-color: #e1e1e1;
+  border: solid;
+  border-color: #afafaf;
+  border-width: 2px;
+  height: 50px;
+}
+
+.flowtow2 img {
+  border-right: 2px solid #afafaf;
+}
+
+.flowtow2 ul {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.flowtow2 ul li {
+  margin: 0px 10px;
+  font-size: 10pt;
+}
+
+.like {
+  background-color: #cccccc;
+  border: none;
+  color: white;
+  height: 30px;
+  margin: 10px;
+  width: 30px;
+}
+
+.like:hover {
+  background-color: #5591eb;
+}
+
+.like:active {
+  color: #b9cbf0;
+}
+
+#most-popular {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  width: 100%;
+  margin: 10px 0px;
+}
+
+/*
+ * Footer
+ */
+
+#whatis {
+  background-color: #e1e1e1;
+  text-align: center;
+  padding: 25px 0px;
+  width: 100%;
+}
+
+footer {
+  background-color: #cccccc;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  padding: 20px 0px;
+  width: 100%;
+}
+
+#social ul li {
+  padding: 15px 0px;
+}
+
+#social-twitter {
+  background-image: url("../assets/twitter.png");
+  background-position: 0px 15px;
+  background-repeat: no-repeat;
+}
+
+#social-facebook {
+  background-image: url("../assets/facebook.png");
+  background-position: 5px 13px;
+  background-repeat: no-repeat;
+}
+
+#social-instagram {
+  background-image: url("../assets/instagram.png");
+  background-position: 0px 13px;
+  background-repeat: no-repeat;
+}
+
+#social ul li a {
+  color: #373737;
+  padding-left: 30px;
+}
+
+#social ul li a:hover,
+.footer-tos li a:hover {
+  color: #5591eb;
+}
+
+.footer-tos li {
+  padding: 15px 0px;
+}
+
+.footer-tos li a {
+  color: #373737;
+}
+
+#copyright {
+  flex: 100%;
+  order: 0;
+  padding-top: 50px;
+  text-align: center;
+}

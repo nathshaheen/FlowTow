@@ -1,0 +1,116 @@
+<!--
+  Student Name:
+  Student Number:
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>FlowTow</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- Include Handlebars from a CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="./js/main.js" type=module defer></script>
+  </head>
+  <body>
+
+    <header>
+      <div id="logo"></div>
+      <nav>
+          <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#!/all-posts">All Posts</a></li>
+              <li><a href="#!/my-posts">My Posts</a></li>
+              <li><a href="#whatis">About</a></li>
+          </ul>
+      </nav>
+    </header>
+
+    <div id="heading">
+          
+      <hgroup>
+          <h1>Welcome to FlowTow!</h1>
+      </hgroup>
+
+    </div>
+
+    <div id="content">
+    </div>
+
+    <div id="whatis">
+      <p>Flowtow is an image sharing website, allowing users post thier own and view posts by other users.</p>
+    </div>
+
+    <footer>
+
+      <div id="social">
+        <ul>
+          <li id="social-twitter"><a href="#">Twitter</a></li>
+          <li id="social-facebook"><a href="#">Facebook</a></li>
+          <li id="social-instagram"><a href="#">Instagram</a></li>
+        </ul>
+      </div>
+
+      <ul class="footer-tos">
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Cookies</a></li>
+      </ul>
+      
+      <p id="copyright">All content and images subject to copyright &copy; COMP2110/6110 FlowTow 2021.</p>
+    </footer>
+
+
+    <!-- Templates -->
+
+    <script id="single-post" type="text/x-handlebars-template">
+      {{#each posts}}
+        <div class="flowtow">
+          <a href="#!/posts/{{id}}">
+            <img src={{p_url}} alt="{{p_caption}}" style="width:100%;height:cw;">
+          </a>
+          <ul>
+            <li>{{p_caption}}</li>
+            <li>{{p_author}}</li>
+            <li class="likes">Likes: {{p_likes}}</li>
+          </ul>
+        </div>
+      {{/each}}
+    </script>
+
+    <script id="three-post-list" type="text/x-handlebars-template">
+      {{#each posts}}
+        <div class="flowtow">
+          <a href="#!/posts/{{id}}">
+            <img src={{p_url}} alt="{{p_caption}}" style="width:100%;height:cw;">
+          </a>
+          <ul>
+            <li>{{p_caption}}</li>
+            <li>{{p_author}}</li>
+            <li class="likes">Likes: {{p_likes}}</li>
+          </ul>
+        </div>
+      {{/each}}
+    </script>
+
+    <script id="ten-list" type="text/x-handlebars-template">
+      {{#each posts}}
+        <div class="flowtow2">
+          <a href="#!/posts/{{id}}">
+            <img src={{p_url}} alt={{p_caption}} style="width:50px;height:50px;">
+          </a>
+          <ul>
+              <li>{{p_caption}} by {{p_author}}</li>
+              <li>Likes: {{p_likes}}</li>
+              <li>{{published_at}}</li>
+          </ul>
+          <button class="like" data-id={{id}} type='button'><i class="material-icons" style="font-size:20px;">thumb_up</i></button>
+        </div>
+      {{/each}}
+    </script>
+  </body>
+</html>
